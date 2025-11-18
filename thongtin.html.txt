@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Cá Nhân & Liên Hệ - Ngô Quang Vinh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Trang Chủ</a>
+        <a href="thongtin.html">Thông Tin Cá Nhân & Liên Hệ</a>
+        <a href="dichvu.html">Kỹ Năng & Dịch Vụ</a>
+    </nav>
+
+    <div class="container">
+        <h1>Thông Tin Cá Nhân & Liên Hệ</h1>
+        
+        <h2>Ngô Quang Vinh</h2>
+        <p>Dưới đây là một số thông tin cơ bản và cách thức liên lạc với tôi:</p>
+        
+        <h2>Chi Tiết Cá Nhân</h2>
+        <ul>
+            <li><strong>Ngày sinh:</strong> 03/03/2009</li>
+            <li><strong>Quê quán:</strong> Thành phố Nha Trang</li>
+            <li><strong>Trình độ học vấn:</strong> Trung học Phổ thông</li>
+            <li><strong>Sở thích:</strong> Tạo web cờ bạc</li>
+        </ul>
+
+        <h2>Liên Hệ</h2>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:vinhbavailol@gmail.com">vinhbavailol@gmail.com</a></li>
+            <li><strong>Điện thoại:</strong> 07x2x5x001</li>
+            <li><strong>Địa chỉ hiện tại:</strong> Mgọc Thảo</li>
+        </ul>
+        
+        <div class="footer">
+            <p>© 2025 Ngô Quang Vinh. Trang web cá nhân.</p>
+        </div>
+    </div>
+
+</body>
+</html>

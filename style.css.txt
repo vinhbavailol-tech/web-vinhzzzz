@@ -1,0 +1,119 @@
+/* ==================================== */
+/* 1. THIẾT LẬP CHUNG */
+/* ==================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Nền trắng xám nhạt */
+    color: #2c3e50; /* Màu chữ chính (Xanh Đen đậm) */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex; /* Dùng flexbox để căn giữa nội dung chính */
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff; /* Nền trắng cho nội dung */
+    width: 90%;
+    max-width: 800px; /* Chiều rộng tối đa của nội dung */
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+}
+
+/* ==================================== */
+/* 2. HEADER & NAVIGATION */
+/* ==================================== */
+
+/* Thanh điều hướng tổng thể */
+.navbar {
+    width: 100%;
+    max-width: 800px; /* Cùng chiều rộng với container */
+    background-color: #34495e; /* Màu nền Xanh Đen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.navbar a {
+    color: #ecf0f1; /* Màu chữ trắng nhạt */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.navbar a:hover {
+    background-color: #9b59b6; /* Màu Tím Amethyst khi hover */
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ==================================== */
+/* 3. TYPOGRAPHY (CHỮ & TIÊU ĐỀ) */
+/* ==================================== */
+h1 {
+    color: #9b59b6; /* Màu Tím Amethyst cho tiêu đề chính */
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+h2 {
+    color: #34495e; /* Màu Xanh Đen cho tiêu đề phụ */
+    margin-top: 30px;
+    border-bottom: 2px solid #bdc3c7; /* Đường gạch dưới màu xám */
+    padding-bottom: 8px;
+    font-size: 1.6em;
+}
+
+strong {
+    color: #34495e;
+}
+
+/* Liên kết thông thường trong nội dung */
+a {
+    color: #9b59b6; 
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+a:hover { 
+    color: #7f5c9b; /* Tím đậm hơn khi hover */
+    text-decoration: underline; 
+}
+
+/* ==================================== */
+/* 4. LISTS (DANH SÁCH) */
+/* ==================================== */
+ul, ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ol li {
+    margin-bottom: 15px;
+}
+
+/* ==================================== */
+/* 5. FOOTER */
+/* ==================================== */
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 15px;
+    border-top: 1px solid #bdc3c7;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
