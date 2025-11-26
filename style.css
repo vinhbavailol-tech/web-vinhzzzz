@@ -14,7 +14,7 @@ h1 {
     font-size: 13px; 
     /* font Arial */
     font-family: Arial, Helvetica, sans-serif; 
-    /* Thêm màu nền tối để chữ vàng dễ đọc */
+    /* Thêm padding và nền tối để chữ vàng dễ đọc */
     background-color: #333;
     padding: 5px;
 }
