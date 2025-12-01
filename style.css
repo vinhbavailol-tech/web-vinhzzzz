@@ -1,28 +1,24 @@
-/* Basic styling for body and divisions to make the regions stand out */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
-/* Vùng 1: Màu nền đã đổi thành BLUE. Màu chữ vẫn là yellow. */
 #vung1 {
-    background-color: blue; /* Đã sửa: BLUE */
-    color: yellow; /* Màu chữ (từ yêu cầu trước) */
+    background-color: blue;
+    color: yellow;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid orange;
 }
 
-/* Vùng 2: Màu nền đã đổi thành YELLOW. Màu chữ vẫn là red. */
 #vung2 {
-    background-color: yellow; /* Đã sửa: YELLOW */
-    color: red; /* Màu chữ (từ yêu cầu trước) */
+    background-color: yellow;
+    color: red;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
 }
 
-/* Vùng 3: Giữ nguyên màu nền và màu chữ. */
 #vung3 {
     background-color: lightcoral;
     color: white; 
