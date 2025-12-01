@@ -28,3 +28,21 @@ body {
     padding: 15px;
     border: 2px solid red;
 }
+
+/* === CÁC THAY ĐỔI THEO YÊU CẦU: MÀU CHỮ THẺ P === */
+
+/* Vùng 1: Màu chữ p là vàng */
+/* LƯU Ý: Vùng này có nền vàng, chữ vàng sẽ làm chữ p rất khó đọc. Bạn nên chọn màu chữ khác như đen (black) hoặc đỏ (red) để có độ tương phản tốt hơn. */
+#vung1 p {
+    color: yellow;
+}
+
+/* Vùng 2: Màu chữ p là đỏ */
+#vung2 p {
+    color: red;
+}
+
+/* Vùng 3: Màu chữ p là trắng */
+#vung3 p {
+    color: white;
+}
