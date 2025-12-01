@@ -4,45 +4,31 @@ body {
     margin: 20px;
 }
 
-/* Vùng 1: Styled as requested (yellow background) */
+/* Vùng 1: Styled as requested (yellow background). Màu chữ đã đổi thành yellow. */
 #vung1 {
     background-color: yellow;
+    /* Áp dụng màu chữ cho toàn bộ nội dung Vùng 1 */
+    color: yellow; 
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid orange;
 }
 
-/* Vùng 2: Styled as requested (blue background) */
+/* Vùng 2: Styled as requested (blue background). Màu chữ đã đổi thành red. */
 #vung2 {
     background-color: lightblue; /* Using lightblue for better readability */
-    color: darkblue;
+    /* Áp dụng màu chữ cho toàn bộ nội dung Vùng 2 */
+    color: red;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
 }
 
-/* Vùng 3: Styled as requested (red background) */
+/* Vùng 3: Styled as requested (red background). Màu chữ đã đổi thành white. */
 #vung3 {
     background-color: lightcoral; /* Using lightcoral for better readability */
-    color: #333;
+    /* Áp dụng màu chữ cho toàn bộ nội dung Vùng 3 */
+    color: white;
     padding: 15px;
     border: 2px solid red;
-}
-
-/* === CÁC THAY ĐỔI THEO YÊU CẦU: MÀU CHỮ THẺ P === */
-
-/* Vùng 1: Màu chữ p là vàng */
-/* LƯU Ý: Vùng này có nền vàng, chữ vàng sẽ làm chữ p rất khó đọc. Bạn nên chọn màu chữ khác như đen (black) hoặc đỏ (red) để có độ tương phản tốt hơn. */
-#vung1 p {
-    color: yellow;
-}
-
-/* Vùng 2: Màu chữ p là đỏ */
-#vung2 p {
-    color: red;
-}
-
-/* Vùng 3: Màu chữ p là trắng */
-#vung3 p {
-    color: white;
 }
