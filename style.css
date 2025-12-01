@@ -4,31 +4,28 @@ body {
     margin: 20px;
 }
 
-/* Vùng 1: Styled as requested (yellow background). Màu chữ đã đổi thành yellow. */
+/* Vùng 1: Màu nền đã đổi thành BLUE. Màu chữ vẫn là yellow. */
 #vung1 {
-    background-color: yellow;
-    /* Áp dụng màu chữ cho toàn bộ nội dung Vùng 1 */
-    color: yellow; 
+    background-color: blue; /* Đã sửa: BLUE */
+    color: yellow; /* Màu chữ (từ yêu cầu trước) */
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid orange;
 }
 
-/* Vùng 2: Styled as requested (blue background). Màu chữ đã đổi thành red. */
+/* Vùng 2: Màu nền đã đổi thành YELLOW. Màu chữ vẫn là red. */
 #vung2 {
-    background-color: lightblue; /* Using lightblue for better readability */
-    /* Áp dụng màu chữ cho toàn bộ nội dung Vùng 2 */
-    color: red;
+    background-color: yellow; /* Đã sửa: YELLOW */
+    color: red; /* Màu chữ (từ yêu cầu trước) */
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
 }
 
-/* Vùng 3: Styled as requested (red background). Màu chữ đã đổi thành white. */
+/* Vùng 3: Giữ nguyên màu nền và màu chữ. */
 #vung3 {
-    background-color: lightcoral; /* Using lightcoral for better readability */
-    /* Áp dụng màu chữ cho toàn bộ nội dung Vùng 3 */
-    color: white;
+    background-color: lightcoral;
+    color: white; 
     padding: 15px;
     border: 2px solid red;
 }
