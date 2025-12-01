@@ -1,29 +1,30 @@
-/* ==================================== */
-/* Định dạng cho H1 */
-/* ==================================== */
-h1 {
-    color: red; /* Màu chữ đỏ */
-    text-align: center; /* Căn giữa */
+/* Basic styling for body and divisions to make the regions stand out */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
-/* ==================================== */
-/* Định dạng cho đoạn P thứ nhất */
-/* ==================================== */
-p:first-of-type {
-    color: yellow; /* Màu chữ vàng */
-    font-size: 13px; /* Cỡ chữ 13 pixels */
-    font-family: Arial, sans-serif; /* Font Arial */
+/* Vùng 1: Styled as requested (yellow background) */
+#vung1 {
+    background-color: yellow;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid orange;
 }
 
-/* ==================================== */
-/* Định dạng cho đoạn P thứ hai */
-/* ==================================== */
-p:last-of-type {
-    background-color: yellow; /* Màu nền vàng */
-    font-weight: bold; /* In đậm */
-    font-size: 13px; /* Cỡ chữ 13 pixels */
-    font-family: "Times New Roman", serif; /* Font Times New Roman */
-    
-    /* Thêm padding để màu nền bao quanh chữ đẹp hơn */
-    padding: 5px; 
+/* Vùng 2: Styled as requested (blue background) */
+#vung2 {
+    background-color: lightblue; /* Using lightblue for better readability */
+    color: darkblue;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid blue;
+}
+
+/* Vùng 3: Styled as requested (red background) */
+#vung3 {
+    background-color: lightcoral; /* Using lightcoral for better readability */
+    color: #333;
+    padding: 15px;
+    border: 2px solid red;
 }
