@@ -1,45 +1,60 @@
+/* Basic styling for body and divisions to make the regions stand out */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
+/* Vùng 1 */
 #vung1 {
-    /* Đã đặt chiều rộng CỐ ĐỊNH 20px (rất hẹp) */
-    width: 20px; 
-    
-    background-color: blue;
-    color: yellow;
+    /* Đã thêm: Chiều cao cố định */
+    height: 20px; 
+    /* Đã thêm: Tạo góc bo tròn (viên) */
+    border-radius: 10px; 
+    /* Đã thêm: Ẩn nội dung bị tràn ra ngoài (quan trọng vì chiều cao quá nhỏ) */
+    overflow: hidden; 
+
+    background-color: yellow;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid orange;
-    /* Giúp padding và border không cộng thêm vào chiều rộng 20px */
+    /* Giúp padding/border không làm thay đổi chiều rộng đã định */
     box-sizing: border-box; 
 }
 
+/* Vùng 2 */
 #vung2 {
-    /* Đã đặt chiều rộng CỐ ĐỊNH 70px (rất hẹp) */
-    width: 70px; 
+    /* Đã thêm: Chiều cao cố định */
+    height: 70px; 
+    /* Đã thêm: Tạo góc bo tròn (viên) */
+    border-radius: 10px; 
+    /* Đã thêm: Ẩn nội dung bị tràn ra ngoài */
+    overflow: hidden; 
     
-    background-color: yellow;
-    color: red;
+    background-color: lightblue;
+    color: darkblue;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
     box-sizing: border-box;
 }
 
+/* Vùng 3 */
 #vung3 {
-    /* Đã đặt chiều rộng CỐ ĐỊNH 20px (rất hẹp) */
-    width: 20px; 
-
+    /* Đã thêm: Chiều cao cố định */
+    height: 20px; 
+    /* Đã thêm: Tạo góc bo tròn (viên) */
+    border-radius: 10px; 
+    /* Đã thêm: Ẩn nội dung bị tràn ra ngoài */
+    overflow: hidden; 
+    
     background-color: lightcoral;
-    color: white; 
+    color: #333;
     padding: 15px;
     border: 2px solid red;
     box-sizing: border-box;
 }
 
-/* Quy tắc TẠO ẢNH CO DÃN LINH HOẠT vẫn được giữ nguyên */
+/* Quy tắc BẮT BUỘC để ảnh không bị lỗi (phóng to/thu nhỏ theo vùng chứa) */
 img {
     max-width: 100%; 
     height: auto; 
