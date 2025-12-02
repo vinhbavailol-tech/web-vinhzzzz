@@ -4,34 +4,44 @@ body {
 }
 
 #vung1 {
+    /* Đã đặt chiều rộng CỐ ĐỊNH 20px (rất hẹp) */
+    width: 20px; 
+    
     background-color: blue;
     color: yellow;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid orange;
+    /* Giúp padding và border không cộng thêm vào chiều rộng 20px */
+    box-sizing: border-box; 
 }
 
 #vung2 {
+    /* Đã đặt chiều rộng CỐ ĐỊNH 70px (rất hẹp) */
+    width: 70px; 
+    
     background-color: yellow;
     color: red;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
+    box-sizing: border-box;
 }
 
 #vung3 {
+    /* Đã đặt chiều rộng CỐ ĐỊNH 20px (rất hẹp) */
+    width: 20px; 
+
     background-color: lightcoral;
     color: white; 
     padding: 15px;
     border: 2px solid red;
+    box-sizing: border-box;
 }
 
-/* RULE FOR RESPONSIVE IMAGE SCALING */
+/* Quy tắc TẠO ẢNH CO DÃN LINH HOẠT vẫn được giữ nguyên */
 img {
-    /* Ensures the image does not exceed the width of its container */
     max-width: 100%; 
-    /* Automatically adjusts height to maintain the original aspect ratio */
     height: auto; 
-    /* Helps with consistent layout control */
     display: block; 
 }
