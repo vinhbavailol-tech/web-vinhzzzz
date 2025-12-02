@@ -1,30 +1,43 @@
-/body {
+body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
+/* Vùng 1: Nền xanh dương, chữ vàng, viền đỏ (20px) */
 #vung1 {
-    background-color: yellow;
+    background-color: blue; 
+    color: yellow; 
+    border: 20px solid red; 
+    
     padding: 15px;
     margin-bottom: 10px;
-    border: 20px solid white;
-    color: yellow;
+    box-sizing: border-box; 
 }
 
+/* Vùng 2: Nền xanh lá, chữ vàng, viền hồng (70px) */
 #vung2 {
-    background-color: lightblue; 
-    color: darkblue;
+    background-color: green; 
+    color: yellow; 
+    border: 70px solid pink; 
+    
     padding: 15px;
     margin-bottom: 10px;
-    border: 70px solid black;
-    color: red;
+    box-sizing: border-box;
 }
 
+/* Vùng 3: Nền tím nhạt, chữ cam đậm, VIỀN ĐEN (20px) */
 #vung3 {
-    background-color: lightcoral; 
-    color: #333;
+    background-color: #d1c4e9; 
+    color: darkorange; 
+    border: 20px solid black; 
+    
     padding: 15px;
-    border: 20px solid gray;
-    color:white;
+    box-sizing: border-box;
 }
 
+/* Quy tắc BẮT BUỘC để ảnh co dãn linh hoạt (responsive) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
