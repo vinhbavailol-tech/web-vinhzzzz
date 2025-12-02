@@ -4,37 +4,46 @@ body {
 }
 
 #vung1 {
-    /* Đã có sẵn */
     background-color: blue;
     color: yellow;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid orange; 
     
-    /* Bổ sung chiều cao */
+    /* Required height */
     height: 20px; 
+    
+    /* Hides overflowing content like a large image */
+    overflow: hidden; 
+}
+
+/* Styles to try and fit the image within the small container while preserving aspect ratio */
+#vung1 img {
+    /* Limits image height to the container's height (20px) */
+    max-height: 100%; 
+    /* Limits image width */
+    max-width: 100%;
+    /* Ensures the image fills the 20px space but will be cropped */
+    object-fit: cover; 
 }
 
 #vung2 {
-    /* Đã có sẵn */
     background-color: yellow;
     color: red;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
     
-    /* Bổ sung chiều cao */
+    /* Required height */
     height: 70px;
 }
 
 #vung3 {
-    /* Đã có sẵn */
     background-color: lightcoral;
     color: white; 
     padding: 15px;
     border: 2px solid red;
     
-    /* Bổ sung chiều cao */
+    /* Required height */
     height: 20px;
 }
-
