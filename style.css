@@ -4,24 +4,36 @@ body {
 }
 
 #vung1 {
+    /* Đã có sẵn */
     background-color: blue;
     color: yellow;
     padding: 15px;
     margin-bottom: 10px;
-    border: 2px solid orange;
+    border: 2px solid orange; 
+    
+    /* Bổ sung chiều cao */
+    height: 20px; 
 }
 
 #vung2 {
+    /* Đã có sẵn */
     background-color: yellow;
     color: red;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
+    
+    /* Bổ sung chiều cao */
+    height: 70px;
 }
 
 #vung3 {
+    /* Đã có sẵn */
     background-color: lightcoral;
     color: white; 
     padding: 15px;
     border: 2px solid red;
+    
+    /* Bổ sung chiều cao */
+    height: 20px;
 }
