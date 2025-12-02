@@ -1,33 +1,27 @@
-/* Basic styling for body and divisions to make the regions stand out */
+/* style.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
-/* Vùng 1 */
+/* Vùng 1: Height 20px, Border-radius */
 #vung1 {
-    /* Đã thêm: Chiều cao cố định */
     height: 20px; 
-    /* Đã thêm: Tạo góc bo tròn (viên) */
     border-radius: 10px; 
-    /* Đã thêm: Ẩn nội dung bị tràn ra ngoài (quan trọng vì chiều cao quá nhỏ) */
     overflow: hidden; 
-
+    
     background-color: yellow;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid orange;
-    /* Giúp padding/border không làm thay đổi chiều rộng đã định */
     box-sizing: border-box; 
 }
 
-/* Vùng 2 */
+/* Vùng 2: Height 70px, Border-radius */
 #vung2 {
-    /* Đã thêm: Chiều cao cố định */
     height: 70px; 
-    /* Đã thêm: Tạo góc bo tròn (viên) */
     border-radius: 10px; 
-    /* Đã thêm: Ẩn nội dung bị tràn ra ngoài */
     overflow: hidden; 
     
     background-color: lightblue;
@@ -38,13 +32,10 @@ body {
     box-sizing: border-box;
 }
 
-/* Vùng 3 */
+/* Vùng 3: Height 20px, Border-radius */
 #vung3 {
-    /* Đã thêm: Chiều cao cố định */
     height: 20px; 
-    /* Đã thêm: Tạo góc bo tròn (viên) */
     border-radius: 10px; 
-    /* Đã thêm: Ẩn nội dung bị tràn ra ngoài */
     overflow: hidden; 
     
     background-color: lightcoral;
@@ -54,7 +45,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Quy tắc BẮT BUỘC để ảnh không bị lỗi (phóng to/thu nhỏ theo vùng chứa) */
+/* Quy tắc BẮT BUỘC để ảnh responsive (không bị lỗi) */
 img {
     max-width: 100%; 
     height: auto; 
