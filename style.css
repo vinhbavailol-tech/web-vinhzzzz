@@ -1,10 +1,16 @@
+/* style.css (hoặc style (2).css) */
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
-/* Vùng 1: Nền xanh dương, chữ vàng, viền đỏ (20px) */
+/* Vùng 1: Nền xanh dương, chữ vàng, viền đỏ (20px) - Dùng Flexbox để căn giữa */
 #vung1 {
+    display: flex; /* Bật Flexbox */
+    flex-direction: column; /* Sắp xếp dọc: Thanh điều hướng trên, ảnh dưới */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    
     background-color: blue; 
     color: yellow; 
     border: 20px solid red; 
@@ -25,7 +31,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Vùng 3: Nền tím nhạt, chữ cam đậm, VIỀN ĐEN (20px) */
+/* Vùng 3: Nền tím nhạt, chữ cam đậm, viền đen (20px) */
 #vung3 {
     background-color: #d1c4e9; 
     color: darkorange; 
@@ -40,4 +46,11 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin-top: 10px; /* Tạo khoảng cách giữa điều hướng và ảnh */
+}
+
+/* Đảm bảo nội dung chữ của thanh điều hướng cũng được căn giữa */
+#vung1 p {
+     text-align: center;
+     width: 100%;
 }
