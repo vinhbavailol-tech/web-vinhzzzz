@@ -4,44 +4,34 @@ body {
 }
 
 #vung1 {
-    /* Đã có sẵn */
     background-color: blue;
     color: yellow;
     padding: 15px;
     margin-bottom: 10px;
-    border: 2px solid orange; 
-    
-    /* Bổ sung chiều cao */
-    height: 20px; 
+    border: 2px solid orange;
 }
 
 #vung2 {
-    /* Đã có sẵn */
     background-color: yellow;
     color: red;
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
-    
-    /* Bổ sung chiều cao */
-    height: 70px;
 }
 
 #vung3 {
-    /* Đã có sẵn */
     background-color: lightcoral;
     color: white; 
     padding: 15px;
     border: 2px solid red;
-    
-    /* Bổ sung chiều cao */
-    height: 20px;
-}
-    padding: 15px;
-    border: 2px solid red;
-    
-    /* Required height */
-    height: 20px;
 }
 
-
+/* RULE FOR RESPONSIVE IMAGE SCALING */
+img {
+    /* Ensures the image does not exceed the width of its container */
+    max-width: 100%; 
+    /* Automatically adjusts height to maintain the original aspect ratio */
+    height: auto; 
+    /* Helps with consistent layout control */
+    display: block; 
+}
