@@ -1,53 +1,30 @@
-/* style.css */
-
-body {
+/body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
-/* Vùng 1: Height 20px, Border-radius */
 #vung1 {
-    height: 20px; 
-    border-radius: 10px; 
-    overflow: hidden; 
-    
     background-color: yellow;
     padding: 15px;
     margin-bottom: 10px;
-    border: 2px solid orange;
-    box-sizing: border-box; 
+    border: 20px solid white;
+    color: yellow;
 }
 
-/* Vùng 2: Height 70px, Border-radius */
 #vung2 {
-    height: 70px; 
-    border-radius: 10px; 
-    overflow: hidden; 
-    
-    background-color: lightblue;
+    background-color: lightblue; 
     color: darkblue;
     padding: 15px;
     margin-bottom: 10px;
-    border: 2px solid blue;
-    box-sizing: border-box;
+    border: 70px solid black;
+    color: red;
 }
 
-/* Vùng 3: Height 20px, Border-radius */
 #vung3 {
-    height: 20px; 
-    border-radius: 10px; 
-    overflow: hidden; 
-    
-    background-color: lightcoral;
+    background-color: lightcoral; 
     color: #333;
     padding: 15px;
-    border: 2px solid red;
-    box-sizing: border-box;
+    border: 20px solid gray;
+    color:white;
 }
 
-/* Quy tắc BẮT BUỘC để ảnh responsive (không bị lỗi) */
-img {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-}
