@@ -8,23 +8,10 @@ body {
     color: yellow;
     padding: 15px;
     margin-bottom: 10px;
-    border: 2px solid orange; 
-    
-    /* Required height */
-    height: 20px; 
-    
-    /* Hides overflowing content like a large image */
+    border: 2px solid orange;
+    height: 20px;
+    /* Added based on previous context to handle image overflow in a small container */
     overflow: hidden; 
-}
-
-/* Styles to try and fit the image within the small container while preserving aspect ratio */
-#vung1 img {
-    /* Limits image height to the container's height (20px) */
-    max-height: 100%; 
-    /* Limits image width */
-    max-width: 100%;
-    /* Ensures the image fills the 20px space but will be cropped */
-    object-fit: cover; 
 }
 
 #vung2 {
@@ -33,11 +20,16 @@ body {
     padding: 15px;
     margin-bottom: 10px;
     border: 2px solid blue;
-    
-    /* Required height */
     height: 70px;
 }
 
+#vung3 {
+    background-color: lightcoral;
+    color: white; 
+    padding: 15px;
+    border: 2px solid red;
+    height: 20px;
+}
 #vung3 {
     background-color: lightcoral;
     color: white; 
@@ -47,3 +39,4 @@ body {
     /* Required height */
     height: 20px;
 }
+
