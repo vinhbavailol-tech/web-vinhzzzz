@@ -52,3 +52,25 @@ img {
      text-align: center;
      width: 100%;
 }
+
+/* Kiểu cho các liên kết điều hướng (Trang chủ, Thông tin, Dịch vụ) */
+.nav-links a {
+    /* Đóng khung */
+    border: 2px solid yellow; /* Viền 2px màu vàng */
+    padding: 5px 10px; /* Đệm xung quanh chữ */
+    margin: 0 5px; /* Khoảng cách giữa các liên kết */
+    
+    /* Thiết lập hiển thị */
+    display: inline-block; /* Cho phép áp dụng margin, padding, border */
+    text-decoration: none; /* Bỏ gạch chân */
+    color: yellow; /* Giữ màu chữ vàng */
+    background-color: #004d40; /* Thêm nền màu xanh đậm hơn để nổi bật */
+    border-radius: 5px; /* Góc bo tròn nhẹ */
+    transition: background-color 0.3s, border-color 0.3s; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+/* Kiểu khi di chuột vào (Hover effect) */
+.nav-links a:hover {
+    background-color: #006064; /* Thay đổi màu nền khi di chuột */
+    border-color: white; /* Thay đổi màu viền khi di chuột */
+}
