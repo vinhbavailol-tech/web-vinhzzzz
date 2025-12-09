@@ -44,6 +44,48 @@
                 </tr>
             </tbody>
         </table>
+        
+        <hr style="border-color: yellow;"> 
+        <h2>Form Đăng ký/Thông tin người dùng</h2>
+
+        <form>
+            <div style="margin-bottom: 10px;">
+                <label for="name">Tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label for="country">Quốc gia:</label>
+                <select id="country" name="country">
+                    <option value="vn">Việt Nam</option>
+                    <option value="us">Hoa Kỳ</option>
+                    <option value="jp">Nhật Bản</option>
+                    <option value="other">Khác</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label>Sở thích:</label><br>
+                <input type="checkbox" id="sport" name="hobby" value="sport">
+                <label for="sport">Thể thao</label><br>
+                
+                <input type="checkbox" id="music" name="hobby" value="music">
+                <label for="music">Âm nhạc</label><br>
+                
+                <input type="checkbox" id="read" name="hobby" value="read">
+                <label for="read">Đọc sách</label>
+            </div>
+
+            <div>
+                <button type="submit">Đăng nhập</button>
+                <button type="button" style="margin-left: 10px;">Thoát</button>
+            </div>
+        </form>
         <p>Một số nội dung</p>
     </div>
 
