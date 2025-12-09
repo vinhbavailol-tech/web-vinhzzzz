@@ -7,7 +7,7 @@ body {
 #vung1 {
     display: flex; 
     flex-direction: column; 
-    align-items: center; /* Căn giữa theo chiều ngang */
+    align-items: center; 
     
     background-color: blue; 
     color: yellow; 
@@ -56,12 +56,12 @@ img {
 /* Kiểu cho các liên kết điều hướng (Tạo hiệu ứng ô Excel) */
 .nav-links a {
     /* Đóng khung riêng lẻ và viền rõ ràng */
-    border: 1px solid yellow; /* Viền 1px màu vàng */
-    padding: 8px 15px; /* Tăng padding để giống ô hơn */
+    border: 1px solid yellow; 
+    padding: 8px 15px; 
     
-    /* LOẠI BỎ KHOẢNG CÁCH */
+    /* Dính liền nhau (như ô Excel) */
     margin: 0; 
-    border-radius: 0; /* GÓC VUÔNG */
+    border-radius: 0; 
     
     /* Thiết lập hiển thị */
     display: inline-block; 
@@ -71,9 +71,7 @@ img {
     transition: background-color 0.3s; 
 }
 
-/* Xử lý viền để chúng không bị trùng lặp quá nhiều, nhưng vẫn là viền đơn */
-/* Viền bên trái của phần tử không phải phần tử đầu tiên bị ẩn đi 
-   để mô phỏng các ô liền kề (giống border-collapse) */
+/* Xử lý viền để các ô liền kề viền đơn */
 .nav-links a + a {
     border-left-width: 0;
 }
@@ -82,5 +80,48 @@ img {
 /* Kiểu khi di chuột vào (Hover effect) */
 .nav-links a:hover {
     background-color: #006064; 
-    /* Giữ viền cũ khi hover để tránh làm xê dịch layout */
+}
+
+/* ========================================= */
+/* QUY TẮC ĐÓNG KHUNG FORM MỚI THÊM */
+/* ========================================= */
+
+/* Đóng khung cho toàn bộ Form trong Vùng 2 */
+.form-khung {
+    border: 3px solid yellow; /* Viền màu vàng dày 3px */
+    padding: 20px; /* Tạo không gian bên trong khung */
+    margin-top: 15px; /* Khoảng cách với Bảng điểm */
+    border-radius: 8px; /* Bo tròn góc nhẹ */
+    /* Đảm bảo text bên trong khung vẫn là màu vàng của Vùng 2 */
+    color: yellow; 
+}
+
+/* Tối ưu hiển thị input, select và button trên nền xanh lá */
+.form-khung input[type="text"],
+.form-khung input[type="email"],
+.form-khung select {
+    color: black; 
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 3px;
+    border-radius: 3px;
+    width: 200px; /* Cố định chiều rộng cho dễ nhìn */
+}
+
+.form-khung button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-khung button[type="submit"] {
+    background-color: #ffc107; /* Màu vàng cam cho Đăng nhập */
+    color: #333;
+}
+
+.form-khung button[type="button"] {
+    background-color: #e53935; /* Màu đỏ cho Thoát */
+    color: white;
 }
