@@ -5,8 +5,8 @@ body {
 
 /* Vùng 1: Nền xanh dương, chữ vàng, viền đỏ (20px) - Dùng Flexbox để căn giữa */
 #vung1 {
-    display: flex; /* Bật Flexbox */
-    flex-direction: column; /* Sắp xếp dọc: Thanh điều hướng trên, ảnh dưới */
+    display: flex; 
+    flex-direction: column; 
     align-items: center; /* Căn giữa theo chiều ngang */
     
     background-color: blue; 
@@ -44,7 +44,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin-top: 10px; /* Tạo khoảng cách giữa điều hướng và ảnh */
+    margin-top: 10px;
 }
 
 /* Đảm bảo nội dung chữ của thanh điều hướng cũng được căn giữa */
@@ -53,24 +53,34 @@ img {
      width: 100%;
 }
 
-/* Kiểu cho các liên kết điều hướng (Trang chủ, Thông tin, Dịch vụ) */
+/* Kiểu cho các liên kết điều hướng (Tạo hiệu ứng ô Excel) */
 .nav-links a {
-    /* Đóng khung */
-    border: 2px solid yellow; /* Viền 2px màu vàng */
-    padding: 5px 10px; /* Đệm xung quanh chữ */
-    margin: 0 5px; /* Khoảng cách giữa các liên kết */
+    /* Đóng khung riêng lẻ và viền rõ ràng */
+    border: 1px solid yellow; /* Viền 1px màu vàng */
+    padding: 8px 15px; /* Tăng padding để giống ô hơn */
+    
+    /* LOẠI BỎ KHOẢNG CÁCH */
+    margin: 0; 
+    border-radius: 0; /* GÓC VUÔNG */
     
     /* Thiết lập hiển thị */
-    display: inline-block; /* Cho phép áp dụng margin, padding, border */
-    text-decoration: none; /* Bỏ gạch chân */
-    color: yellow; /* Giữ màu chữ vàng */
-    background-color: #004d40; /* Thêm nền màu xanh đậm hơn để nổi bật */
-    border-radius: 5px; /* Góc bo tròn nhẹ */
-    transition: background-color 0.3s, border-color 0.3s; /* Thêm hiệu ứng chuyển đổi mượt mà */
+    display: inline-block; 
+    text-decoration: none; 
+    color: yellow; 
+    background-color: #004d40; 
+    transition: background-color 0.3s; 
 }
+
+/* Xử lý viền để chúng không bị trùng lặp quá nhiều, nhưng vẫn là viền đơn */
+/* Viền bên trái của phần tử không phải phần tử đầu tiên bị ẩn đi 
+   để mô phỏng các ô liền kề (giống border-collapse) */
+.nav-links a + a {
+    border-left-width: 0;
+}
+
 
 /* Kiểu khi di chuột vào (Hover effect) */
 .nav-links a:hover {
-    background-color: #006064; /* Thay đổi màu nền khi di chuột */
-    border-color: white; /* Thay đổi màu viền khi di chuột */
+    background-color: #006064; 
+    /* Giữ viền cũ khi hover để tránh làm xê dịch layout */
 }
