@@ -5,7 +5,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    /* Loại bỏ margin mặc định của body */
     margin: 0; 
     padding: 0;
     background-color: #f1f1f1; 
@@ -26,9 +25,8 @@ h2, p {
     background-color: #f7f7f7; 
     padding: 60px 0; 
     text-align: center;
-    /* Loại bỏ tất cả viền và khoảng cách gây ra khoảng trắng thừa */
     margin: 0; 
-    border-bottom: none; /* KHÔNG CÓ VIỀN DƯỚI */
+    border-bottom: none;
 }
 
 .header h2 {
@@ -38,73 +36,62 @@ h2, p {
 }
 
 /* ========================================= */
-/* Column Layout - KHẮC PHỤC LỆCH CỘT BẰNG FLOAT + AUTO */
+/* Column Layout - KHẮC PHỤC TRIỆT ĐỂ BẰNG FLEXBOX */
 /* ========================================= */
 
 .row {
+    /* Quan trọng: Biến row thành container Flex */
+    display: flex;
+    /* Đảm bảo không có wrapping */
+    flex-wrap: nowrap; 
     margin: 0; 
-    /* Viền dưới của hàng cột sẽ tạo ra đường kẻ ngăn cách Footer */
+    /* Thêm viền dưới cho cả hàng cột */
     border-bottom: 1px solid #ddd; 
 }
 
-/* Áp dụng Float và Width cố định cho Cột 1 và 2 */
-.column:nth-child(1),
-.column:nth-child(2) {
-    float: left; 
-    /* Giữ 1/3 chiều rộng */
-    width: 33.33%; 
-    padding: 15px;
-    height: 300px; 
-    color: #333;
-    font-weight: bold;
+.column {
+    /* Quan trọng: Thiết lập mỗi cột chiếm một phần bằng nhau */
+    flex: 1; 
     
-    background-color: #d3d3d3; 
-}
+    /* Đảm bảo chiều rộng mặc định là 0 trước khi flex giãn ra */
+    flex-basis: 0; 
 
-/* Cột 3: Tự động chiếm hết không gian còn lại và loại bỏ float */
-.column:nth-child(3) {
-    /* Tự động chiếm hết khoảng trống do Cột 1 & 2 đã float */
-    width: auto; 
-    overflow: hidden; 
     padding: 15px;
-    height: 300px;
+    min-height: 300px; /* Đổi height thành min-height */
     color: #333;
     font-weight: bold;
     background-color: #d3d3d3; 
-}
-
-/* Clearfix for the row container */
-.row::after {
-    content: "";
-    display: table;
-    clear: both; 
+    
+    /* Loại bỏ viền phải */
+    border-right: none;
 }
 
 /* ========================================= */
-/* Footer Layout - KHÔNG CÓ KHOẢNG TRẮNG */
+/* Footer Layout */
 /* ========================================= */
 .footer {
     background-color: #f7f7f7;
     padding: 10px;
     text-align: center;
-    /* Đảm bảo dính sát vào hàng cột */
     margin: 0; 
-    clear: both; 
     color: #333;
-    border-top: none; /* KHÔNG CÓ VIỀN TRÊN */
 }
 
 /* MEDIA QUERIES - Responsive */
 @media screen and (max-width: 600px) {
-    .column:nth-child(1),
-    .column:nth-child(2),
-    .column:nth-child(3) {
-        width: 100%; 
-        float: none; /* Hủy float khi xếp chồng */
-        border-bottom: 1px solid #ddd; 
+    .row {
+        /* Cho phép các cột xếp chồng khi màn hình nhỏ */
+        flex-wrap: wrap; 
     }
     
-    .column:nth-child(3) {
-        border-bottom: none; /* Cột cuối cùng không có viền dưới */
+    .column {
+        /* Khi xếp chồng, mỗi cột chiếm 100% chiều rộng */
+        flex: 0 0 100%; 
+        border-bottom: 1px solid #ddd;
+    }
+    
+    /* Cột cuối cùng không có viền dưới */
+    .column:last-child {
+        border-bottom: none;
     }
 }
