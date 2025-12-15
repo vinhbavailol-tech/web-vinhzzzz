@@ -1,38 +1,27 @@
 * {
-    /* Ensures padding and border are included in the element's total width and height */
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    /* Removes default body margins and padding */
     margin: 0; 
     padding: 0;
-    /* Sets a light background for the whole body */
     background-color: #f1f1f1; 
 }
 
-/* ========================================= */
 /* Description text styling */
-/* ========================================= */
 h2, p {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-/* ========================================= */
 /* Header Layout */
-/* ========================================= */
 .header {
     background-color: #f7f7f7; 
-    padding: 60px 0; /* Increased top/bottom padding for a taller header */
+    padding: 60px 0; 
     text-align: center;
-    
-    /* Sets light gray borders for the header */
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    
-    /* Removes extra whitespace */
     margin: 1px 0 0 0;
 }
 
@@ -42,26 +31,21 @@ h2, p {
     color: #333;
 }
 
-/* ========================================= */
-/* Column Layout */
-/* ========================================= */
-
+/* Column Layout - Adjusted */
 .column {
     float: left; 
-    /* Long decimal to ensure total width is exactly 100% */
-    width: 33.33333333%; 
+    /* Reduced width to 33.3% to prevent rounding errors causing overflow */
+    width: 33.3%; 
     padding: 15px;
-    height: 300px; /* Fixed height */
+    height: 300px; 
     color: #333;
     font-weight: bold;
     
-    /* Gray background color as in the image */
     background-color: #d3d3d3; 
-    /* Separator border */
     border-right: 1px solid #ddd;
 }
 
-/* Removes the right border from the last column to prevent layout overflow/misalignment */
+/* Removes the right border from the last column */
 .column:last-child {
     border-right: none;
 }
@@ -73,23 +57,17 @@ h2, p {
     clear: both; 
 }
 
-/* ========================================= */
 /* Footer Layout */
-/* ========================================= */
 .footer {
     background-color: #f7f7f7;
     padding: 10px;
     text-align: center;
-    border-top: 1px solid #ddd; /* Only top border needed */
-    clear: both; /* Ensures the footer is placed below the floated columns */
+    border-top: 1px solid #ddd; 
+    clear: both; 
     color: #333;
 }
 
-/* ========================================= */
 /* MEDIA QUERIES - Responsive */
-/* ========================================= */
-
-/* When the screen width is 600px or less, the columns stack */
 @media screen and (max-width: 600px) {
     .column {
         width: 100%; 
@@ -97,7 +75,6 @@ h2, p {
         border-bottom: 1px solid #ddd; 
     }
     
-    /* Removes the bottom border from the last column when stacked */
     .column:last-child {
         border-bottom: none;
     }
