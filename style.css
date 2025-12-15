@@ -5,20 +5,36 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f1f1f1; /* Nền nhẹ cho toàn bộ trang */
+    /* Loại bỏ margin mặc định của body để lấp đầy toàn bộ viewport */
+    margin: 0; 
+    padding: 0;
+    /* Đặt nền trắng (hoặc rất nhạt) cho toàn bộ body */
+    background-color: #f1f1f1; 
+}
+
+/* ========================================= */
+/* Phần tử chứa thông tin mô tả */
+/* ========================================= */
+h2, p {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* ========================================= */
 /* Bố cục Header */
 /* ========================================= */
 .header {
-    background-color: #f7f7f7;
-    padding: 30px;
+    /* Nền trắng/xám rất nhạt cho Header như trong ảnh */
+    background-color: #f7f7f7; 
+    padding: 60px 0; /* Tăng padding trên dưới để Header cao hơn */
     text-align: center;
-    border: 1px solid #ddd;
-    margin-bottom: 1px; /* Khoảng cách nhỏ với cột bên dưới */
+    
+    /* Thiết lập viền xám nhẹ cho Header */
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    
+    /* Căn chỉnh lại margin để dính vào body */
+    margin: 1px 0 0 0;
 }
 
 .header h2 {
@@ -31,28 +47,31 @@ body {
 /* Bố cục Cột (Columns) */
 /* ========================================= */
 
-/* Chiều rộng mặc định cho mỗi cột là 33.33% */
 .column {
-    float: left; /* Quan trọng: Đặt float cho các cột */
-    width: 33.33%; 
+    float: left; 
+    /* Thay đổi 33.33% thành 33.33333333% để đảm bảo tổng 100% */
+    width: 33.33333333%; 
     padding: 15px;
-    height: 300px; /* Chiều cao cố định như trong ảnh mẫu */
-    border: 1px solid #ddd;
-    /* Dùng một màu xám đồng nhất như trong ảnh */
-    background-color: #d3d3d3 !important; 
+    height: 300px; /* Chiều cao cố định */
     color: #333;
     font-weight: bold;
+    
+    /* Đặt màu nền xám cho cột như ảnh */
+    background-color: #d3d3d3; 
+    /* Dùng viền xám để ngăn cách các khu vực chính */
+    border-right: 1px solid #ddd;
 }
 
-/* Bộ chọn này để xử lý khoảng trắng giữa các cột, nhưng trong ví dụ float
-   để đơn giản và đạt bố cục như ảnh, ta không cần margin.
-   Nếu dùng margin, cần điều chỉnh lại width. */
+/* Loại bỏ viền bên phải của cột cuối cùng để tránh bị quá 100% hoặc lệch */
+.column:last-child {
+    border-right: none;
+}
 
 /* Xóa float sau phần tử chứa các cột (row) */
 .row::after {
     content: "";
     display: table;
-    clear: both; /* Quan trọng: Xóa float */
+    clear: both; 
 }
 
 /* ========================================= */
@@ -62,9 +81,8 @@ body {
     background-color: #f7f7f7;
     padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
-    border-top: none; /* Không cần viền trên vì đã có viền cột */
-    clear: both; /* Quan trọng: Đảm bảo footer nằm dưới các cột */
+    border-top: 1px solid #ddd; /* Chỉ cần viền trên */
+    clear: both; /* Đảm bảo footer nằm dưới các cột */
     color: #333;
 }
 
@@ -72,9 +90,15 @@ body {
 /* MEDIA QUERIES - Responsive */
 /* ========================================= */
 
-/* Khi chiều rộng màn hình nhỏ hơn 600px, các cột sẽ xếp chồng lên nhau */
 @media screen and (max-width: 600px) {
     .column {
-        width: 100%; /* Mỗi cột chiếm toàn bộ chiều rộng */
+        width: 100%; 
+        border-right: none; /* Xóa viền bên phải */
+        border-bottom: 1px solid #ddd; /* Thêm viền dưới khi xếp chồng */
+    }
+    
+    /* Xóa viền dưới của cột cuối cùng */
+    .column:last-child {
+        border-bottom: none;
     }
 }
