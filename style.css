@@ -1,19 +1,19 @@
 * {
-    /* Đảm bảo padding và border được tính vào chiều rộng và chiều cao tổng thể của phần tử */
+    /* Ensures padding and border are included in the element's total width and height */
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    /* Loại bỏ margin mặc định của body để lấp đầy toàn bộ viewport */
+    /* Removes default body margins and padding */
     margin: 0; 
     padding: 0;
-    /* Đặt nền trắng (hoặc rất nhạt) cho toàn bộ body */
+    /* Sets a light background for the whole body */
     background-color: #f1f1f1; 
 }
 
 /* ========================================= */
-/* Phần tử chứa thông tin mô tả */
+/* Description text styling */
 /* ========================================= */
 h2, p {
     margin-left: 20px;
@@ -21,19 +21,18 @@ h2, p {
 }
 
 /* ========================================= */
-/* Bố cục Header */
+/* Header Layout */
 /* ========================================= */
 .header {
-    /* Nền trắng/xám rất nhạt cho Header như trong ảnh */
     background-color: #f7f7f7; 
-    padding: 60px 0; /* Tăng padding trên dưới để Header cao hơn */
+    padding: 60px 0; /* Increased top/bottom padding for a taller header */
     text-align: center;
     
-    /* Thiết lập viền xám nhẹ cho Header */
+    /* Sets light gray borders for the header */
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     
-    /* Căn chỉnh lại margin để dính vào body */
+    /* Removes extra whitespace */
     margin: 1px 0 0 0;
 }
 
@@ -44,30 +43,30 @@ h2, p {
 }
 
 /* ========================================= */
-/* Bố cục Cột (Columns) */
+/* Column Layout */
 /* ========================================= */
 
 .column {
     float: left; 
-    /* Thay đổi 33.33% thành 33.33333333% để đảm bảo tổng 100% */
+    /* Long decimal to ensure total width is exactly 100% */
     width: 33.33333333%; 
     padding: 15px;
-    height: 300px; /* Chiều cao cố định */
+    height: 300px; /* Fixed height */
     color: #333;
     font-weight: bold;
     
-    /* Đặt màu nền xám cho cột như ảnh */
+    /* Gray background color as in the image */
     background-color: #d3d3d3; 
-    /* Dùng viền xám để ngăn cách các khu vực chính */
+    /* Separator border */
     border-right: 1px solid #ddd;
 }
 
-/* Loại bỏ viền bên phải của cột cuối cùng để tránh bị quá 100% hoặc lệch */
+/* Removes the right border from the last column to prevent layout overflow/misalignment */
 .column:last-child {
     border-right: none;
 }
 
-/* Xóa float sau phần tử chứa các cột (row) */
+/* Clearfix for the row container */
 .row::after {
     content: "";
     display: table;
@@ -75,14 +74,14 @@ h2, p {
 }
 
 /* ========================================= */
-/* Bố cục Footer */
+/* Footer Layout */
 /* ========================================= */
 .footer {
     background-color: #f7f7f7;
     padding: 10px;
     text-align: center;
-    border-top: 1px solid #ddd; /* Chỉ cần viền trên */
-    clear: both; /* Đảm bảo footer nằm dưới các cột */
+    border-top: 1px solid #ddd; /* Only top border needed */
+    clear: both; /* Ensures the footer is placed below the floated columns */
     color: #333;
 }
 
@@ -90,14 +89,15 @@ h2, p {
 /* MEDIA QUERIES - Responsive */
 /* ========================================= */
 
+/* When the screen width is 600px or less, the columns stack */
 @media screen and (max-width: 600px) {
     .column {
         width: 100%; 
-        border-right: none; /* Xóa viền bên phải */
-        border-bottom: 1px solid #ddd; /* Thêm viền dưới khi xếp chồng */
+        border-right: none; 
+        border-bottom: 1px solid #ddd; 
     }
     
-    /* Xóa viền dưới của cột cuối cùng */
+    /* Removes the bottom border from the last column when stacked */
     .column:last-child {
         border-bottom: none;
     }
