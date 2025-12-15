@@ -1,18 +1,18 @@
 * {
-    /* Ensures padding and border are included in the element's total width and height */
+    /* Đảm bảo padding và border được tính vào chiều rộng và chiều cao tổng thể của phần tử */
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    /* Removes default body margins and padding */
+    /* Loại bỏ margin mặc định của body */
     margin: 0; 
     padding: 0;
     background-color: #f1f1f1; 
 }
 
 /* ========================================= */
-/* Description text styling - Ensures text sticks to the left */
+/* Description text styling */
 /* ========================================= */
 h2, p {
     margin-left: 10px; 
@@ -27,9 +27,8 @@ h2, p {
     padding: 60px 0; 
     text-align: center;
     /* Loại bỏ tất cả viền và khoảng cách gây ra khoảng trắng thừa */
-    margin: 0;
-    /* Thêm viền dưới mỏng để phân tách rõ ràng với hàng cột */
-    border-bottom: 1px solid #ddd;
+    margin: 0; 
+    border-bottom: none; /* KHÔNG CÓ VIỀN DƯỚI */
 }
 
 .header h2 {
@@ -39,27 +38,39 @@ h2, p {
 }
 
 /* ========================================= */
-/* Column Layout - KHẮC PHỤC LỆCH CỘT */
+/* Column Layout - KHẮC PHỤC LỆCH CỘT BẰNG FLOAT + AUTO */
 /* ========================================= */
 
 .row {
-    margin: 0; /* Loại bỏ margin thừa xung quanh hàng */
-    border-bottom: 1px solid #ddd; /* Thêm viền dưới cho cả hàng cột */
+    margin: 0; 
+    /* Viền dưới của hàng cột sẽ tạo ra đường kẻ ngăn cách Footer */
+    border-bottom: 1px solid #ddd; 
 }
 
-.column {
+/* Áp dụng Float và Width cố định cho Cột 1 và 2 */
+.column:nth-child(1),
+.column:nth-child(2) {
     float: left; 
-    /* Dùng giá trị thập phân dài để chống lỗi làm tròn. 
-       Do không có border-right, tổng width gần 100% sẽ ổn định hơn. */
-    width: 33.33333333%; 
+    /* Giữ 1/3 chiều rộng */
+    width: 33.33%; 
     padding: 15px;
     height: 300px; 
     color: #333;
     font-weight: bold;
     
     background-color: #d3d3d3; 
-    /* Đảm bảo không có viền bên phải */
-    border-right: none;
+}
+
+/* Cột 3: Tự động chiếm hết không gian còn lại và loại bỏ float */
+.column:nth-child(3) {
+    /* Tự động chiếm hết khoảng trống do Cột 1 & 2 đã float */
+    width: auto; 
+    overflow: hidden; 
+    padding: 15px;
+    height: 300px;
+    color: #333;
+    font-weight: bold;
+    background-color: #d3d3d3; 
 }
 
 /* Clearfix for the row container */
@@ -70,7 +81,7 @@ h2, p {
 }
 
 /* ========================================= */
-/* Footer Layout - KHẮC PHỤC KHOẢNG TRẮNG THỪA */
+/* Footer Layout - KHÔNG CÓ KHOẢNG TRẮNG */
 /* ========================================= */
 .footer {
     background-color: #f7f7f7;
@@ -80,21 +91,20 @@ h2, p {
     margin: 0; 
     clear: both; 
     color: #333;
-    /* Thêm viền trên để phân tách với hàng cột (hoặc giữ nguyên nếu đã có border-bottom ở .row) */
-    border-top: 1px solid #ddd; 
+    border-top: none; /* KHÔNG CÓ VIỀN TRÊN */
 }
 
 /* MEDIA QUERIES - Responsive */
 @media screen and (max-width: 600px) {
-    .column {
+    .column:nth-child(1),
+    .column:nth-child(2),
+    .column:nth-child(3) {
         width: 100%; 
-        /* Added back the separator border for stacking columns */
+        float: none; /* Hủy float khi xếp chồng */
         border-bottom: 1px solid #ddd; 
     }
     
-    /* Column 3 occupies the rest of the space */
     .column:nth-child(3) {
-        width: 100%; 
-        border-bottom: none;
+        border-bottom: none; /* Cột cuối cùng không có viền dưới */
     }
 }
