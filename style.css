@@ -1,9 +1,11 @@
 * {
+    /* Đảm bảo padding và border được tính vào chiều rộng và chiều cao tổng thể của phần tử */
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
+    /* Loại bỏ margin mặc định của body */
     margin: 0; 
     padding: 0;
     background-color: #f1f1f1; 
@@ -31,10 +33,13 @@ h2, p {
     color: #333;
 }
 
-/* Column Layout - Adjusted */
+/* ========================================= */
+/* Bố cục Cột (Columns) - ĐÃ SỬA LỖI LỆCH */
+/* ========================================= */
+
 .column {
     float: left; 
-    /* Reduced width to 33.3% to prevent rounding errors causing overflow */
+    /* Đặt chiều rộng cố định cho hai cột đầu tiên */
     width: 33.3%; 
     padding: 15px;
     height: 300px; 
@@ -45,9 +50,11 @@ h2, p {
     border-right: 1px solid #ddd;
 }
 
-/* Removes the right border from the last column */
-.column:last-child {
-    border-right: none;
+/* Sử dụng :nth-child(3) để đảm bảo cột cuối cùng chiếm phần không gian còn lại */
+.column:nth-child(3) {
+    /* Tính toán chiều rộng còn lại chính xác */
+    width: 33.4%; 
+    border-right: none; 
 }
 
 /* Clearfix for the row container */
@@ -75,7 +82,9 @@ h2, p {
         border-bottom: 1px solid #ddd; 
     }
     
-    .column:last-child {
+    .column:nth-child(3) {
+        /* Đảm bảo cột 3 cũng về 100% khi màn hình nhỏ */
+        width: 100%; 
         border-bottom: none;
     }
 }
