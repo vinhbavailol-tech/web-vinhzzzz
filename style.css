@@ -1,127 +1,80 @@
+* {
+    /* Đảm bảo padding và border được tính vào chiều rộng và chiều cao tổng thể của phần tử */
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-/* Vùng 1: Nền xanh dương, chữ vàng, viền đỏ (20px) - Dùng Flexbox để căn giữa */
-#vung1 {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    
-    background-color: blue; 
-    color: yellow; 
-    border: 20px solid red; 
-    
-    padding: 15px;
-    margin-bottom: 10px;
-    box-sizing: border-box; 
-}
-
-/* Vùng 2: Nền xanh lá, chữ vàng, viền hồng (70px) */
-#vung2 {
-    background-color: green; 
-    color: yellow; 
-    border: 70px solid pink; 
-    
-    padding: 15px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-/* Vùng 3: Nền tím nhạt, chữ cam đậm, viền đen (20px) */
-#vung3 {
-    background-color: #d1c4e9; 
-    color: darkorange; 
-    border: 20px solid black; 
-    
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-/* Quy tắc BẮT BUỘC để ảnh co dãn linh hoạt (responsive) */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
-}
-
-/* Đảm bảo nội dung chữ của thanh điều hướng cũng được căn giữa */
-#vung1 p {
-     text-align: center;
-     width: 100%;
-}
-
-/* Kiểu cho các liên kết điều hướng (Tạo hiệu ứng ô Excel) */
-.nav-links a {
-    /* Đóng khung riêng lẻ và viền rõ ràng */
-    border: 1px solid yellow; 
-    padding: 8px 15px; 
-    
-    /* Dính liền nhau (như ô Excel) */
-    margin: 0; 
-    border-radius: 0; 
-    
-    /* Thiết lập hiển thị */
-    display: inline-block; 
-    text-decoration: none; 
-    color: yellow; 
-    background-color: #004d40; 
-    transition: background-color 0.3s; 
-}
-
-/* Xử lý viền để các ô liền kề viền đơn */
-.nav-links a + a {
-    border-left-width: 0;
-}
-
-
-/* Kiểu khi di chuột vào (Hover effect) */
-.nav-links a:hover {
-    background-color: #006064; 
+    margin: 0;
+    padding: 20px;
+    background-color: #f1f1f1; /* Nền nhẹ cho toàn bộ trang */
 }
 
 /* ========================================= */
-/* QUY TẮC ĐÓNG KHUNG FORM MỚI THÊM */
+/* Bố cục Header */
 /* ========================================= */
-
-/* Đóng khung cho toàn bộ Form trong Vùng 2 */
-.form-khung {
-    border: 3px solid yellow; /* Viền màu vàng dày 3px */
-    padding: 20px; /* Tạo không gian bên trong khung */
-    margin-top: 15px; /* Khoảng cách với Bảng điểm */
-    border-radius: 8px; /* Bo tròn góc nhẹ */
-    /* Đảm bảo text bên trong khung vẫn là màu vàng của Vùng 2 */
-    color: yellow; 
+.header {
+    background-color: #f7f7f7;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-bottom: 1px; /* Khoảng cách nhỏ với cột bên dưới */
 }
 
-/* Tối ưu hiển thị input, select và button trên nền xanh lá */
-.form-khung input[type="text"],
-.form-khung input[type="email"],
-.form-khung select {
-    color: black; 
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 3px;
-    border-radius: 3px;
-    width: 200px; /* Cố định chiều rộng cho dễ nhìn */
-}
-
-.form-khung button {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.form-khung button[type="submit"] {
-    background-color: #ffc107; /* Màu vàng cam cho Đăng nhập */
+.header h2 {
+    font-size: 40px;
+    margin: 0;
     color: #333;
 }
 
-.form-khung button[type="button"] {
-    background-color: #e53935; /* Màu đỏ cho Thoát */
-    color: white;
+/* ========================================= */
+/* Bố cục Cột (Columns) */
+/* ========================================= */
+
+/* Chiều rộng mặc định cho mỗi cột là 33.33% */
+.column {
+    float: left; /* Quan trọng: Đặt float cho các cột */
+    width: 33.33%; 
+    padding: 15px;
+    height: 300px; /* Chiều cao cố định như trong ảnh mẫu */
+    border: 1px solid #ddd;
+    /* Dùng một màu xám đồng nhất như trong ảnh */
+    background-color: #d3d3d3 !important; 
+    color: #333;
+    font-weight: bold;
+}
+
+/* Bộ chọn này để xử lý khoảng trắng giữa các cột, nhưng trong ví dụ float
+   để đơn giản và đạt bố cục như ảnh, ta không cần margin.
+   Nếu dùng margin, cần điều chỉnh lại width. */
+
+/* Xóa float sau phần tử chứa các cột (row) */
+.row::after {
+    content: "";
+    display: table;
+    clear: both; /* Quan trọng: Xóa float */
+}
+
+/* ========================================= */
+/* Bố cục Footer */
+/* ========================================= */
+.footer {
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-top: none; /* Không cần viền trên vì đã có viền cột */
+    clear: both; /* Quan trọng: Đảm bảo footer nằm dưới các cột */
+    color: #333;
+}
+
+/* ========================================= */
+/* MEDIA QUERIES - Responsive */
+/* ========================================= */
+
+/* Khi chiều rộng màn hình nhỏ hơn 600px, các cột sẽ xếp chồng lên nhau */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%; /* Mỗi cột chiếm toàn bộ chiều rộng */
+    }
 }
