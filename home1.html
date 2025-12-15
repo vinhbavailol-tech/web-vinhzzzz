@@ -2,98 +2,27 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Home HTML</title>
+    <title>CSS Template using Float</title>
     <link rel="stylesheet" href="style.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 <body>
-    <div id="vung1">
-        <div class="nav-links"> 
-            <a href="#">Trang chủ</a>
-            <a href="#">Thông tin</a>
-            <a href="#">Dịch vụ</a>
-        </div>
-        <img src="istockphoto-893660690-1024x1024.jpg" alt="Ảnh nền" width="30"> 
+    <h2>CSS Template using Float</h2>
+    <p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
+    <p>Resize the browser window to see the responsive effect.</p>
+
+    <div class="header">
+      <h2>Header</h2>
     </div>
 
-    <div id="vung2">
-        <p>Vùng nội dung</p>
-        <h2>Bảng Điểm Môn Học</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Môn học</th>
-                    <th>Điểm giữa kỳ</th>
-                    <th>Điểm cuối kỳ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Toán</td>
-                    <td>8.5</td>
-                    <td>9.0</td>
-                </tr>
-                <tr>
-                    <td>Văn</td>
-                    <td>7.0</td>
-                    <td>8.0</td>
-                </tr>
-                <tr>
-                    <td>Tiếng Anh</td>
-                    <td>9.5</td>
-                    <td>9.5</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <hr style="border-color: yellow;"> 
-        <h2>Form Đăng ký/Thông tin người dùng</h2>
-
-        <form class="form-khung"> <div style="margin-bottom: 10px;">
-                <label for="name">Tên:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <div style="margin-bottom: 10px;">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div style="margin-bottom: 10px;">
-                <label for="country">Quốc gia:</label>
-                <select id="country" name="country">
-                    <option value="vn">Việt Nam</option>
-                    <option value="us">Hoa Kỳ</option>
-                    <option value="jp">Nhật Bản</option>
-                    <option value="other">Khác</option>
-                </select>
-            </div>
-
-            <div style="margin-bottom: 15px;">
-                <label>Sở thích:</label><br>
-                <input type="checkbox" id="sport" name="hobby" value="sport">
-                <label for="sport">Thể thao</label><br>
-                
-                <input type="checkbox" id="music" name="hobby" value="music">
-                <label for="music">Âm nhạc</label><br>
-                
-                <input type="checkbox" id="read" name="hobby" value="read">
-                <label for="read">Đọc sách</label>
-            </div>
-
-            <div>
-                <button type="submit">Đăng nhập</button>
-                <button type="button" style="margin-left: 10px;">Thoát</button>
-            </div>
-        </form>
-
-        <p>Một số nội dung</p>
+    <div class="row">
+      <div class="column" style="background-color:#c8c8c8;">Column</div>
+      <div class="column" style="background-color:#c8c8c8;">Column</div>
+      <div class="column" style="background-color:#c8c8c8;">Column</div>
     </div>
 
-    <div id="vung3">
-        <div class="vung_con">
-            <p>Vùng chân trang / Footer</p>
-            <p>Nội dung chân trang</p>
-        </div>
+    <div class="footer">
+      <p>Footer</p>
     </div>
 </body>
 </html>
