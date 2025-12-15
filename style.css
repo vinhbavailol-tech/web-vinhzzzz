@@ -8,15 +8,14 @@ body {
     /* Removes default body margins and padding */
     margin: 0; 
     padding: 0;
-    /* Sets a light background for the whole body */
     background-color: #f1f1f1; 
 }
 
 /* ========================================= */
-/* Description text styling - Removed side margins to stick to the left edge */
+/* Description text styling - Ensures text sticks to the left */
 /* ========================================= */
 h2, p {
-    margin-left: 10px; /* Slight margin to prevent sticking to the absolute edge */
+    margin-left: 10px; 
     margin-right: 10px;
 }
 
@@ -24,13 +23,13 @@ h2, p {
 /* Header Layout */
 /* ========================================= */
 .header {
-    /* White/very light gray background as in the image */
     background-color: #f7f7f7; 
     padding: 60px 0; 
     text-align: center;
-    
-    /* Removed border-top and border-bottom to match the screenshot */
+    /* Loại bỏ tất cả viền và khoảng cách gây ra khoảng trắng thừa */
     margin: 0;
+    /* Thêm viền dưới mỏng để phân tách rõ ràng với hàng cột */
+    border-bottom: 1px solid #ddd;
 }
 
 .header h2 {
@@ -40,26 +39,26 @@ h2, p {
 }
 
 /* ========================================= */
-/* Column Layout - Final adjustment for alignment */
+/* Column Layout - KHẮC PHỤC LỆCH CỘT */
 /* ========================================= */
 
 .row {
-    margin-top: 1px; /* Small separation from header */
+    margin: 0; /* Loại bỏ margin thừa xung quanh hàng */
+    border-bottom: 1px solid #ddd; /* Thêm viền dưới cho cả hàng cột */
 }
 
 .column {
     float: left; 
-    /* Final stable width distribution: 33.3%, 33.3%, 33.4% */
-    width: 33.3%; 
+    /* Dùng giá trị thập phân dài để chống lỗi làm tròn. 
+       Do không có border-right, tổng width gần 100% sẽ ổn định hơn. */
+    width: 33.33333333%; 
     padding: 15px;
     height: 300px; 
     color: #333;
     font-weight: bold;
     
-    /* Gray background color as in the image */
     background-color: #d3d3d3; 
-    
-    /* Removed the border-right completely to match the screenshot where columns are seamless */
+    /* Đảm bảo không có viền bên phải */
     border-right: none;
 }
 
@@ -71,15 +70,18 @@ h2, p {
 }
 
 /* ========================================= */
-/* Footer Layout */
+/* Footer Layout - KHẮC PHỤC KHOẢNG TRẮNG THỪA */
 /* ========================================= */
 .footer {
     background-color: #f7f7f7;
     padding: 10px;
     text-align: center;
-    /* Removed border-top to match the screenshot */
+    /* Đảm bảo dính sát vào hàng cột */
+    margin: 0; 
     clear: both; 
     color: #333;
+    /* Thêm viền trên để phân tách với hàng cột (hoặc giữ nguyên nếu đã có border-bottom ở .row) */
+    border-top: 1px solid #ddd; 
 }
 
 /* MEDIA QUERIES - Responsive */
