@@ -1,0 +1,40 @@
+/* Thiết lập cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Xóa khoảng trắng mặc định của trình duyệt */
+}
+
+/* 1. Thiết lập thanh menu bên trái (sidenav) */
+.sidenav {
+    height: 100%;          /* Chiều cao phủ hết màn hình */
+    width: 160px;          /* Độ rộng menu */
+    position: fixed;       /* Giữ cố định khi cuộn trang */
+    z-index: 1;            /* Luôn nằm trên lớp nội dung */
+    top: 0;                /* Sát mép trên */
+    left: 0;               /* Sát mép trái */
+    background-color: #111; /* Màu đen như trong ảnh */
+    overflow-x: hidden;    /* Ẩn thanh cuộn ngang nếu có */
+    padding-top: 20px;     /* Khoảng cách phía trên các link */
+}
+
+/* 2. Định dạng các đường link trong menu */
+.sidenav a {
+    padding: 10px 15px;    /* Khoảng đệm cho link dễ bấm */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-size: 18px;       /* Kích thước chữ */
+    color: #fff;           /* Màu chữ trắng */
+    display: block;        /* Mỗi link nằm trên một hàng */
+    font-weight: bold;     /* Chữ đậm */
+}
+
+/* 3. Hiệu ứng khi di chuột vào link */
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #333; /* Đổi màu nền xám nhẹ khi hover */
+}
+
+/* 4. Định dạng phần nội dung bên phải */
+.content {
+    margin-left: 160px;    /* Đẩy nội dung sang phải 160px để không bị menu đè */
+    padding: 0 20px;       /* Khoảng cách lề trái/phải cho văn bản */
+}
