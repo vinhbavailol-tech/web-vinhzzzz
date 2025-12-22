@@ -1,46 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
 }
 
-/* Top navigation */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+.header {
+    text-align: center;
+    padding: 32px;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+/* Container for the flexbox grid */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* Create four equal columns that sit next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 }
 
-/* Main content */
-.content {
-  background-color: #ddd;
-  padding: 50px 20px;
-  min-height: 150px;
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    /* Grayscale effect as seen in your reference image */
+    filter: grayscale(100%);
+    transition: 0.3s;
 }
 
-.content h2 {
-  font-size: 30px;
-  margin-top: 0;
+/* Restore color on hover */
+.column img:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
 }
 
-/* Footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 30px 20px;
+/* Responsive layout: 2 columns on screens less than 800px wide */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 
-.footer p {
-  margin: 0;
+/* Responsive layout: 1 column on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
 }
