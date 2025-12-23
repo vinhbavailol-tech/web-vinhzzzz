@@ -1,59 +1,17 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-}
-
-.header {
-    text-align: center;
-    padding: 32px;
-}
-
-/* Container for the flexbox grid */
-.container {
+/* The parent container */
+.day {
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+    background-color: #2196F3; /* Blue background */
+    padding: 10px;
 }
 
-/* Create four equal columns that sit next to each other */
-.column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-    /* Grayscale effect as seen in your reference image */
-    filter: grayscale(100%);
-    transition: 0.3s;
-}
-
-/* Restore color on hover */
-.column img:hover {
-    filter: grayscale(0%);
-    cursor: pointer;
-}
-
-/* Responsive layout: 2 columns on screens less than 800px wide */
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-/* Responsive layout: 1 column on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
-    }
+/* The flex items */
+.day > div {
+    background-color: #f1f1f1; /* Light grey background */
+    margin: 10px;
+    padding: 20px;
+    font-size: 25px;
+    flex: 1;                 /* Ensures items grow equally */
+    text-align: center;      /* Centers the text */
+    font-family: Arial, sans-serif;
 }
