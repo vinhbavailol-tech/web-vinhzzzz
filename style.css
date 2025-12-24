@@ -1,17 +1,71 @@
-/* The parent container */
-.day {
-    display: flex;
-    background-color: #2196F3; /* Blue background */
-    padding: 10px;
+* {
+  box-sizing: border-box;
 }
 
-/* The flex items */
-.day > div {
-    background-color: #f1f1f1; /* Light grey background */
-    margin: 10px;
-    padding: 20px;
-    font-size: 25px;
-    flex: 1;                 /* Ensures items grow equally */
-    text-align: center;      /* Centers the text */
-    font-family: Arial, sans-serif;
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+/* Hide header to match the reference image */
+header {
+  display: none; 
+}
+
+/* Top Navigation */
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav li {
+  float: left;
+}
+
+.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Flex Layout */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  padding: 20px;
+}
+
+/* Left Column */
+.flex-container > div:first-child {
+  flex: 25%;
+}
+
+/* Main Content */
+.flex-container > div:nth-child(2) {
+  flex: 50%;
+}
+
+/* Right Column */
+.flex-container > div:last-child {
+  flex: 25%;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
