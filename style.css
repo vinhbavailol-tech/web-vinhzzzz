@@ -3,43 +3,43 @@
 }
 
 body {
-    margin: 0;
+    margin: 0; /* Bắt buộc để sát mép màn hình */
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff;
 }
 
 .card {
-    width: 100%;
+    width: 100%; /* Chiếm hết chiều ngang */
     margin: 0;
-    background-color: white;
+    background-color: #fff;
 }
 
-.image-box {
+.image-container {
     width: 100%;
+}
+
+.image-container img {
+    width: 100%; /* Ảnh giãn theo chiều rộng khung */
     height: auto;
+    display: block; /* Loại bỏ khoảng hở nhỏ dưới chân ảnh */
 }
 
-.image-box img {
-    width: 100%;
-    display: block;
-}
-
-.container {
-    padding: 10px 16px;
+.content {
+    padding: 16px; /* Giữ khoảng cách cho chữ không bị dính sát mép */
 }
 
 .title {
-    margin: 15px 0 5px 0;
+    margin: 10px 0;
     font-size: 24px;
 }
 
 .subtitle {
-    margin: 5px 0 20px 0;
+    color: #000;
+    margin-bottom: 20px;
 }
 
 .date {
-    color: #999;
+    color: #757575;
 }
 
 .text {
@@ -56,8 +56,8 @@ body {
 
 .btn {
     background-color: white;
-    border: 1px solid #ddd;
-    padding: 10px 20px;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
     font-weight: bold;
     cursor: pointer;
 }
