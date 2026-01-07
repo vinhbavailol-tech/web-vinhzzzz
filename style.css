@@ -1,31 +1,29 @@
-/* General settings to fix font and background */
+/* Sets the background and clean font */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Raleway", Arial, sans-serif;
     background-color: #f1f1f1;
     margin: 0;
-    padding: 20px;
     display: flex;
     justify-content: center;
 }
 
-/* The Card Container - This fixes the 'Form' */
-.card {
-    background-color: white;
-    max-width: 800px;
+/* Centers the card and limits its width */
+.main-container {
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    max-width: 800px;
+    padding: 20px;
 }
 
-.card-img {
-    width: 100%;
-    height: auto;
+/* Creates the white box with the shadow from the image */
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 }
 
 .container {
     padding: 0.01em 16px;
 }
 
-/* Typography fixes */
 h3 {
     font-size: 24px;
     margin: 10px 0;
@@ -33,51 +31,44 @@ h3 {
 
 h5 {
     font-size: 18px;
-    margin: 10px 0;
     font-weight: 400;
 }
 
-.opacity {
-    opacity: 0.60;
+.text-grey {
+    color: #757575 !important;
 }
 
 p {
+    margin: 15px 0;
     line-height: 1.5;
 }
 
-/* Button and Comment alignment */
+/* Aligns button and comments on the same line */
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 16px;
+    padding: 16px 0;
 }
 
-.button-white {
-    color: #000;
-    background-color: #fff;
+.button {
     border: 1px solid #ccc;
+    background-color: #fff;
     padding: 8px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    text-align: center;
     cursor: pointer;
-    white-space: nowrap;
     font-weight: bold;
 }
 
-.button-white:hover {
+.button:hover {
     background-color: #ccc;
-}
-
-.comment-text {
-    font-weight: bold;
 }
 
 .tag {
     background-color: #000;
     color: #fff;
     padding: 2px 8px;
-    font-size: 12px;
+}
+
+.text-right {
+    text-align: right;
 }
