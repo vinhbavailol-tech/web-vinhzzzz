@@ -1,86 +1,83 @@
-/* Layout Reset */
-* {
-    box-sizing: border-box;
-}
-
+/* General settings to fix font and background */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background-color: #f1f1f1;
+    margin: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    padding: 40px 15px;
-    margin: 0;
 }
 
-/* Card Container */
-.blog-card {
-    background-color: #fff;
-    width: 100%;
+/* The Card Container - This fixes the 'Form' */
+.card {
+    background-color: white;
     max-width: 800px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-/* Image Formatting */
-.card-header img {
+.card-img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
-/* Text Padding */
-.card-body {
-    padding: 20px;
+.container {
+    padding: 0.01em 16px;
 }
 
-.title {
-    margin: 10px 0;
+/* Typography fixes */
+h3 {
     font-size: 24px;
-    letter-spacing: 1px;
+    margin: 10px 0;
 }
 
-.meta {
-    color: #000;
-    font-size: 16px;
-    margin-bottom: 20px;
+h5 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 400;
 }
 
-.date {
-    color: #757575;
+.opacity {
+    opacity: 0.60;
 }
 
-.content {
+p {
     line-height: 1.5;
-    color: #000;
-    margin-bottom: 30px;
 }
 
-/* Footer & Buttons */
-.card-footer {
+/* Button and Comment alignment */
+.row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 16px;
 }
 
-.btn-read {
+.button-white {
+    color: #000;
     background-color: #fff;
     border: 1px solid #ccc;
-    padding: 10px 20px;
-    font-weight: bold;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
     cursor: pointer;
-    transition: background 0.3s;
+    white-space: nowrap;
+    font-weight: bold;
 }
 
-.btn-read:hover {
+.button-white:hover {
     background-color: #ccc;
 }
 
-.comment-section {
-    font-size: 15px;
+.comment-text {
+    font-weight: bold;
 }
 
-.badge {
+.tag {
     background-color: #000;
     color: #fff;
     padding: 2px 8px;
-    margin-left: 5px;
+    font-size: 12px;
 }
